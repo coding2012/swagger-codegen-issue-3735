@@ -1,0 +1,1 @@
+# swagger-codegen-issue-3735

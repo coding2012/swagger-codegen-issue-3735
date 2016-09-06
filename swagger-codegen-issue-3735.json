@@ -1,0 +1,57 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "TEST",
+        "version": "1.0.0",
+        "title": "TEST"
+    },
+    "basePath": "/",
+    "tags": [{
+        "name": "TEST",
+        "description": "TEST"
+    }],
+    "schemes": ["http"],
+    "paths": {
+        "/test": {
+            "post": {
+                "tags": ["TEST"],
+                "summary": "TEST",
+                "description": "",
+                "operationId": "add",
+                "consumes": ["application/json"],
+                "parameters": [{
+                    "in": "body",
+                    "name": "test",
+                    "required": true,
+                    "schema": {
+                        "$ref": "#/definitions/Test"
+                    }
+                }],
+                "responses": {
+                    "201": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "Test": {
+            "type": "object",
+            "properties": {
+                 "telecomType": {
+                    "type": "string",
+                    "enum": [
+                        "TELEPHONE",
+                        "FAX",
+                        "EMAIL",
+                        "PAGER"
+                    ]
+                }
+            }
+        }
+    }
+}
